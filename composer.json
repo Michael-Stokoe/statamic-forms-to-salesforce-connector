@@ -1,0 +1,37 @@
+{
+    "name": "stokoe/forms-to-salesforce-connector",
+    "autoload": {
+        "psr-4": {
+            "Stokoe\\FormsToSalesforceConnector\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Stokoe\\FormsToSalesforceConnector\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "statamic/cms": "^5.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "pixelfear/composer-dist-plugin": true
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Forms To Salesforce Connector",
+            "description": "Forms To Salesforce Connector addon"
+        },
+        "laravel": {
+            "providers": [
+                "Stokoe\\FormsToSalesforceConnector\\ServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
