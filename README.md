@@ -1,8 +1,24 @@
 # Forms To Salesforce Connector
 
-> Forms To Salesforce Connector is a Statamic addon that does something pretty neat.
+**Seamlessly connect your Statamic forms to Salesforce** - Automatically create Leads, Contacts, and other Salesforce objects from form submissions with advanced field mapping and comprehensive error handling.
+
+## 🔗 Related Connectors
+
+This connector is part of the **Forms To Wherever** ecosystem. Check out our other connectors:
+
+- **[Forms To Wherever](https://statamic.com/addons/stokoe/forms-to-wherever)** - Base package (required)
+- **[Forms To Mailchimp](https://statamic.com/addons/stokoe/forms-to-mailchimp-connector)** - Mailchimp email marketing
+- **[Forms To HubSpot](https://statamic.com/addons/stokoe/forms-to-hubspot-connector)** - HubSpot CRM integration
+- **[Forms To ConvertKit](https://statamic.com/addons/stokoe/forms-to-convertkit-connector)** - ConvertKit email marketing
+- **[Forms To ActiveCampaign](https://statamic.com/addons/stokoe/forms-to-activecampaign-connector)** - ActiveCampaign automation
 
 ## Features
+
+- **Multiple object support** - Create Leads, Contacts, Accounts, Opportunities, or Cases
+- **Custom field mapping** to any Salesforce object field
+- **Lead source tracking** - Automatically set lead sources for attribution
+- **Required field handling** - Intelligent defaults for required Salesforce fields
+- **Comprehensive error handling** with detailed logging
 
 This addon does:
 
