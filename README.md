@@ -36,4 +36,28 @@ composer require stokoe/forms-to-salesforce-connector
 
 ## How to Use
 
-Here's where you can explain how to use this wonderful addon.
+1. Edit your form in the Statamic Control Panel
+2. Navigate to the "Form Connectors" section
+3. Enable the Salesforce connector
+4. Enter your Salesforce instance URL and access token
+5. Select the object type (Lead, Contact, etc.)
+6. Configure field mappings as needed
+7. Save and test!
+
+### Conditional Field Mapping
+
+You can map multiple form fields to the same Salesforce field to support conditional forms. For example, if you have separate service type fields that show based on a category selection:
+
+| Form Field | Salesforce Field |
+|------------|------------------|
+| residential_service | Service_Type__c |
+| commercial_service | Service_Type__c |
+| retirement_service | Service_Type__c |
+
+The connector will use the first non-empty value, ignoring null/empty fields.
+
+## Requirements
+
+- PHP 8.2+ (8.3+ for Statamic 6)
+- Statamic 4.0+ | 5.0+ | 6.0+
+- Forms To Wherever base package

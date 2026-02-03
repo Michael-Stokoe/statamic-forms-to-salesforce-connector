@@ -203,12 +203,21 @@ class SalesforceConnector implements ConnectorInterface
         }
 
         // Add custom field mappings
+        // Skip null/empty values when key already exists to support conditional fields
         foreach ($fieldMapping as $mapping) {
             $formField = $mapping['form_field'] ?? '';
             $salesforceField = $mapping['salesforce_field'] ?? '';
 
             if ($formField && $salesforceField && isset($formData[$formField])) {
-                $objectData[$salesforceField] = $formData[$formField];
+                $value = $formData[$formField];
+                
+                // Skip null/empty values to allow multiple conditional fields
+                // to map to the same Salesforce field (first non-empty value wins)
+                if (array_key_exists($salesforceField, $objectData) && ($value === null || $value === '')) {
+                    continue;
+                }
+                
+                $objectData[$salesforceField] = $value;
             }
         }
 
